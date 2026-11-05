@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#F3F3F3</color>
+    <color name="key_number">#FFFFFF</color>
+    <color name="key_function">#FAFAFA</color>
+    <color name="key_equal">#005A9E</color>
+    <color name="text_primary">#151515</color>
+    <color name="text_secondary">#777777</color>
+    <color name="divider">#DDDDDD</color>
+</resources>

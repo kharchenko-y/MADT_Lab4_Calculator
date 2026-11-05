@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="calculator_title">Calculator</string>
+    <string name="mode_standard">Standard</string>
+    <string name="menu_symbol">☰</string>
+    <string name="history_symbol">◴</string>
+    <string name="menu_description">Calculator information</string>
+    <string name="history_description">Open calculation history</string>
+    <string name="about_calculator">Standard calculator. Tap the history button to review calculations.</string>
+    <string name="history_title">History</string>
+    <string name="history_empty">There is no history yet.</string>
+    <string name="clear_history">Clear history</string>
+    <string name="dialog_close">Close</string>
+    <string name="history_item_format">%1$s  %2$s</string>
+    <string name="error_division_by_zero">Cannot divide by zero</string>
+    <string name="error_negative_sqrt">Invalid input</string>
+    <string name="memory_indicator">M</string>
+    <string name="empty_string"></string>
+    <string name="key_percent">%</string>
+    <string name="key_ce">CE</string>
+    <string name="key_c">C</string>
+    <string name="key_backspace">⌫</string>
+    <string name="key_reciprocal">1/x</string>
+    <string name="key_square">x²</string>
+    <string name="key_square_root">√x</string>
+    <string name="key_divide">÷</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_multiply">×</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_minus">−</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_plus">+</string>
+    <string name="key_sign">+/−</string>
+    <string name="key_0">0</string>
+    <string name="key_decimal">.</string>
+    <string name="key_equals">=</string>
+    <string name="memory_title">Memory</string>
+    <string name="memory_empty">No stored value</string>
+    <string name="memory_value_format">Stored value: %1$s</string>
+    <string name="key_mv">M⌄</string>
+    <string name="key_mc">MC</string>
+    <string name="key_mr">MR</string>
+    <string name="key_mp">M+</string>
+    <string name="key_mm">M−</string>
+    <string name="key_ms">MS</string>
+</resources>

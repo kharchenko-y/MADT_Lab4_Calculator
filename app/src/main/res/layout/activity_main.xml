@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calculator_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:paddingLeft="4dp" android:paddingRight="4dp"
+    android:orientation="vertical">
+    <TextView android:layout_width="match_parent"
+        android:layout_height="28dp" android:gravity="center_vertical"
+        android:paddingLeft="12dp" android:text="@string/calculator_title"
+        android:textSize="12sp" android:textColor="@color/text_secondary" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/menu_button" android:layout_width="50dp"
+            android:layout_height="48dp" android:text="@string/menu_symbol"
+            android:contentDescription="@string/menu_description"
+            android:backgroundTint="@null" android:textSize="23sp"
+            android:textAllCaps="false" style="@android:style/Widget.Material.Button.Borderless" />
+        <TextView android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="match_parent" android:gravity="center_vertical"
+            android:text="@string/mode_standard" android:textStyle="bold"
+            android:textSize="21sp" android:textColor="@color/text_primary" />
+        <Button android:id="@+id/history_button" android:layout_width="54dp"
+            android:layout_height="48dp" android:text="@string/history_symbol"
+            android:contentDescription="@string/history_description"
+            android:backgroundTint="@null" android:textSize="24sp"
+            android:textAllCaps="false" style="@android:style/Widget.Material.Button.Borderless" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="155dp"
+        android:orientation="vertical" android:paddingLeft="14dp" android:paddingRight="14dp"
+        android:gravity="bottom|right">
+        <TextView android:id="@+id/expression_text"
+            android:layout_width="match_parent" android:layout_height="32dp"
+            android:gravity="right|center_vertical" android:textColor="@color/text_secondary"
+            android:textSize="16sp" android:maxLines="1" />
+        <TextView android:id="@+id/result_text"
+            android:layout_width="match_parent" android:layout_height="76dp"
+            android:gravity="right|center_vertical" android:text="@string/key_0"
+            android:textColor="@color/text_primary" android:textSize="48sp"
+            android:maxLines="1" />
+        <TextView android:id="@+id/memory_indicator"
+            android:layout_width="match_parent" android:layout_height="24dp"
+            android:gravity="left|center_vertical" android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="44dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/key_mc" style="@style/CalcMemoryKey" android:text="@string/key_mc" />
+        <Button android:id="@+id/key_mr" style="@style/CalcMemoryKey" android:text="@string/key_mr" />
+        <Button android:id="@+id/key_mp" style="@style/CalcMemoryKey" android:text="@string/key_mp" />
+        <Button android:id="@+id/key_mm" style="@style/CalcMemoryKey" android:text="@string/key_mm" />
+        <Button android:id="@+id/key_ms" style="@style/CalcMemoryKey" android:text="@string/key_ms" />
+        <Button android:id="@+id/key_mv" style="@style/CalcMemoryKey" android:text="@string/key_mv" />
+    </LinearLayout>
+    <GridLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:rowCount="6" android:columnCount="4"
+        android:useDefaultMargins="false" android:alignmentMode="alignBounds">
+        <Button android:id="@+id/key_percent" style="@style/CalcFunctionKey" android:layout_row="0" android:layout_column="0" android:text="@string/key_percent" />
+        <Button android:id="@+id/key_ce" style="@style/CalcFunctionKey" android:layout_row="0" android:layout_column="1" android:text="@string/key_ce" />
+        <Button android:id="@+id/key_c" style="@style/CalcFunctionKey" android:layout_row="0" android:layout_column="2" android:text="@string/key_c" />
+        <Button android:id="@+id/key_backspace" style="@style/CalcFunctionKey" android:layout_row="0" android:layout_column="3" android:text="@string/key_backspace" />
+        <Button android:id="@+id/key_reciprocal" style="@style/CalcFunctionKey" android:layout_row="1" android:layout_column="0" android:text="@string/key_reciprocal" />
+        <Button android:id="@+id/key_square" style="@style/CalcFunctionKey" android:layout_row="1" android:layout_column="1" android:text="@string/key_square" />
+        <Button android:id="@+id/key_square_root" style="@style/CalcFunctionKey" android:layout_row="1" android:layout_column="2" android:text="@string/key_square_root" />
+        <Button android:id="@+id/key_divide" style="@style/CalcFunctionKey" android:layout_row="1" android:layout_column="3" android:text="@string/key_divide" />
+        <Button android:id="@+id/key_7" style="@style/CalcNumberKey" android:layout_row="2" android:layout_column="0" android:text="@string/key_7" />
+        <Button android:id="@+id/key_8" style="@style/CalcNumberKey" android:layout_row="2" android:layout_column="1" android:text="@string/key_8" />
+        <Button android:id="@+id/key_9" style="@style/CalcNumberKey" android:layout_row="2" android:layout_column="2" android:text="@string/key_9" />
+        <Button android:id="@+id/key_multiply" style="@style/CalcFunctionKey" android:layout_row="2" android:layout_column="3" android:text="@string/key_multiply" />
+        <Button android:id="@+id/key_4" style="@style/CalcNumberKey" android:layout_row="3" android:layout_column="0" android:text="@string/key_4" />
+        <Button android:id="@+id/key_5" style="@style/CalcNumberKey" android:layout_row="3" android:layout_column="1" android:text="@string/key_5" />
+        <Button android:id="@+id/key_6" style="@style/CalcNumberKey" android:layout_row="3" android:layout_column="2" android:text="@string/key_6" />
+        <Button android:id="@+id/key_minus" style="@style/CalcFunctionKey" android:layout_row="3" android:layout_column="3" android:text="@string/key_minus" />
+        <Button android:id="@+id/key_1" style="@style/CalcNumberKey" android:layout_row="4" android:layout_column="0" android:text="@string/key_1" />
+        <Button android:id="@+id/key_2" style="@style/CalcNumberKey" android:layout_row="4" android:layout_column="1" android:text="@string/key_2" />
+        <Button android:id="@+id/key_3" style="@style/CalcNumberKey" android:layout_row="4" android:layout_column="2" android:text="@string/key_3" />
+        <Button android:id="@+id/key_plus" style="@style/CalcFunctionKey" android:layout_row="4" android:layout_column="3" android:text="@string/key_plus" />
+        <Button android:id="@+id/key_sign" style="@style/CalcFunctionKey" android:layout_row="5" android:layout_column="0" android:text="@string/key_sign" />
+        <Button android:id="@+id/key_0" style="@style/CalcNumberKey" android:layout_row="5" android:layout_column="1" android:text="@string/key_0" />
+        <Button android:id="@+id/key_decimal" style="@style/CalcNumberKey" android:layout_row="5" android:layout_column="2" android:text="@string/key_decimal" />
+        <Button android:id="@+id/key_equals" style="@style/CalcEqualsKey" android:layout_row="5" android:layout_column="3" android:text="@string/key_equals" />
+    </GridLayout>
+</LinearLayout>
