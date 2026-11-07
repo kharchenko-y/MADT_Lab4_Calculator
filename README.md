@@ -1,4 +1,4 @@
-# Calculator App — MADT Lab #4 (Viber)
+# Calculator — Android App
 
 An Android **Standard-style calculator** built for the *Mobile Applications Development Techniques* (MADT) laboratory assignment. The interface follows the provided Windows Calculator reference, adapted for a portrait Android screen. The app is implemented in **Java and XML**, with calculation logic written from scratch using the Java standard library.
 
@@ -8,7 +8,7 @@ An Android **Standard-style calculator** built for the *Mobile Applications Deve
 |:---:|:---:|
 | <img src="docs/screenshots/calculator-main.png" alt="Android calculator with 5 + 2 = 7" width="270"> | <img src="docs/screenshots/calculator-history.png" alt="History dialog showing previous calculations" width="270"> |
 
-*Captured by the student on the Pixel 6 API 35 Android emulator after the Code Review fixes.*
+*Calculator running on a Pixel 6 emulator (Android API 35).*
 
 ## Features
 
@@ -71,7 +71,7 @@ To run the unit tests, open the Android Studio terminal in the project root.
 ./gradlew :app:testDebugUnitTest
 ```
 
-**Verification:** On 5 November 2026, the student successfully executed the Windows Gradle unit-test command (`BUILD SUCCESSFUL`), launched the reviewed version on a Pixel 6 API 35 emulator, checked calculation results, and opened the history dialog. The source contains **60 Java unit tests**, including **13 regression tests** introduced during the separate Code Review session. This does not imply that every Android UI or lifecycle edge case was instrumented and tested.
+**Validation:** The Windows Gradle unit-test command completed successfully on 5 November 2026. Arithmetic operations and calculation history were also checked on a Pixel 6 API 35 emulator. The test suite contains **60 Java unit tests**, including **13 regression tests** for state transitions. Automated Android UI and lifecycle coverage is not included.
 
 ## Architecture and project files
 
@@ -108,8 +108,6 @@ MADT_Lab4_Calculator/
 - Repeatedly squaring extremely large numbers may produce a value that exceeds the `double` range used by `Math.sqrt`. In that unusual case, attempting `√x` can trigger an unhandled `NumberFormatException`. This is a **known limitation**, retained because the Code Review session was restricted to its two selected priority fixes.
 - The interface was compared to the assignment's Standard calculator reference and manually inspected on a Pixel 6 API 35 emulator; pixel-identical reproduction and accessibility testing across all screen/font sizes are **not claimed**.
 
-## AI-assisted development process
+## Engineering notes
 
-The assignment requires separate sessions for code generation, code review, documentation, and GitHub publication. The **Code Review** session fixed two calculator state-transition problems: sign switching when a second operand is pending, and entering a new digit after a transformed result (percentage/unary operation). The documentation session added this README, student-provided emulator screenshots, and session notes **without changing application code or tests**.
-
-The repository publication and final `@ListOfsessions` report are distinct assignment stages. See `CODE_REVIEW_NOTES.md` and `DOCUMENTATION_SESSION_NOTES.md` for more detail.
+The calculation engine is separate from the Android interface, making arithmetic rules, memory, history, and input-state transitions testable without an emulator. The reviewed implementation includes regression coverage for sign changes during a pending operation and new number entry after percentage or unary transformations.
